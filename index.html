@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mapa</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/settings.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAOVYVT39lTgunnHw8dV4Fers6q_-vZtU&callback=myGoogleMapa&libraries=geometry,places" defer></script>
+    <script src="javascript/js.js"></script>
+</head>
+<body>
+<header class="container">
+    <h1>
+        Výpočet vzdialenosti
+    </h1>
+</header>
+<section class="container">
+    <div id="zadavanie">
+        <div class="row">
+            <div class="col-md-3" ></div>
+            <div class="col-md-6" >
+                <label for="miesto">Zadajte miesto:</label>
+                <input class="form-control" type="text" id="miesto" placeholder="Zadajte miesto" >
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5" ></div>
+            <div class="col-md-2">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="how" id="auto" value="auto" checked onchange="vypocetVzdialenosti()">
+                    <label class="form-check-label" for="auto">Autom</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="how" id="pesi" value="pesi" onchange="vypocetVzdialenosti()">
+                    <label class="form-check-label" for="pesi">Peši</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4" ></div>
+            <div class="col-md-4">
+                <button class="form-control" id="vzdialenost" onclick="vypocetVzdialenosti()">Výpočet vzdialenosti</button>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-4" ></div>
+            <div class="col-md-4">
+                <button class="form-control" onclick="zobrazZastavky()">Zobraziť zastávky v blízkosti FEI</button>
+            </div>
+        </div>
+        <div class="row" >
+            <div class="col-md-12" id="km"></div>
+        </div>
+    </div>
+    <div class="row" id="mapy">
+        <div class="col-md-6" id="googleMapa"></div>
+        <div class="col-md-6" id="googleStreetView"></div>
+    </div>
+
+</section>
+<footer>
+
+    Design by: Katarína Stasová
+    <br>
+    Icons made by <a href="https://www.flaticon.com/authors/srip" title="srip">srip</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+    <br>
+    Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+</footer>
+
+</body>
+</html>

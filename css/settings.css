@@ -1,0 +1,36 @@
+div#googleStreetView{
+    height: 500px;
+    border: 10px solid midnightblue;
+
+}
+
+div#googleMapa{
+    height: 500px;
+    border: 10px solid midnightblue;
+    border-right: 0;
+}
+
+*{
+    text-align: center;
+
+}
+
+#km{
+    padding: 30px;
+}
+
+#zadavanie{
+    background: midnightblue;
+    color: white;
+    font-size: medium;
+    padding-top: 20px;
+    margin-bottom: 0;
+}
+div{
+    padding: 5px;
+}
+
+h1{
+    padding: 30px;
+    color: midnightblue;
+}
